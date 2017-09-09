@@ -60,7 +60,7 @@ object PlayAngularCLI {
     private def runNGCommand(uiDirectory: File, ngCommand: String): Process = {
 
         if (System.getProperty("os.name").startsWith("Windows")) {
-            val process: ProcessBuilder = Process("cmd" + "/c" + ngCommand, uiDirectory)
+            val process: ProcessBuilder = Process("cmd /c " + ngCommand, uiDirectory)
             println(s"Will run: ${process.toString} in ${uiDirectory.getPath}")
             process.run()
         } else {
