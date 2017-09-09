@@ -9,18 +9,16 @@ import { SampleService } from './shared/services/sample.service';
 })
 export class AppComponent {
 
-  title = 'app';
+  hello = '';
 
   constructor(private sampleService: SampleService) {}
-
-  ngOnInit() {
-      this.getSampleData();
-  }
 
   public getSampleData(): void {
     this.sampleService.getHelloWorld()
       .subscribe((data: any) => {
-        this.title = data;
-      }, (err) => {});
+        this.hello = data;
+      }, (err) => {
+        console.log(err);
+      });
   }
 }

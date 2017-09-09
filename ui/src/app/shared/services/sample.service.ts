@@ -11,8 +11,8 @@ export class SampleService {
   constructor(private http: Http) {}
 
   getHelloWorld() {
-    return this.http.get(URL_CONST.URL_PREFIX + '/api/v1/hello-world')
-      .map((response: Response) => response.json());
+    return this.http.get(URL_CONST.URL_PREFIX + 'api/v1/hello-world')
+      .map((response: Response) => response._body);
   }
 
 }
