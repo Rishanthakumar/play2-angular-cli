@@ -6,8 +6,8 @@ import play.mvc.Result;
 
 public class ServiceController extends BaseController {
 
-    public Result Test() {
-        return ok("ok");
+    public Result helloWorldService() {
+        return ok("Hello World");
     }
 
 }
