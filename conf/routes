@@ -5,4 +5,4 @@
 # API endpoint test
 
 
-GET         /api/                   controllers.ServiceController.Test()
+GET         /api/v1/hello-world                   controllers.ServiceController.helloWorldService()
